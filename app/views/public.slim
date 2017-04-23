@@ -1,0 +1,27 @@
+ul.timeline
+
+  - life.count.times do | i |
+    - unless life.this_one('masque', i) == 'TRUE'
+
+      li
+        div.date
+          span #{ life.this_one('jour', i) }
+          span #{ life.this_one('annee', i) }
+        div.icone
+          i class="#{ life.this_one('symbole', i) }"
+        div.nom
+          |
+            #{ life.this_one('nom', i) }
+
+          - unless life.this_one('img1', i).nil?
+            br
+            img src='/img/#{life.this_one('img1', i)}'
+
+          - unless life.this_one('img2', i).nil?
+            img src='/img/#{life.this_one('img2', i)}'
+
+          - unless life.this_one('img3', i).nil?
+            img src='/img/#{life.this_one('img3', i)}'
+
+          - unless life.this_one('img4', i).nil?
+            img src='/img/#{life.this_one('img4', i)}'

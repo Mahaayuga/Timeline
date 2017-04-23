@@ -1,0 +1,15 @@
+ul.timeline
+
+- (25..31).each do |i|
+
+  li
+    div.date
+      span #{ life.this_one('jour', i) + " "}
+      span #{ life.this_one('annee', i) + " "}
+    div.nom #{ life.this_one('nom', i) }
+    - unless life.this_one('img1', i).nil?
+      br
+      img src='/img/#{life.this_one('img1', i)}'
+    - else
+      span référence : #{puts life.this_one('img1', i)}
+    br
