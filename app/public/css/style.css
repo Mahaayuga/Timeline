@@ -1,146 +1,127 @@
-/*
-	.class
-	#id
-*/
-
 .timeline {
-	margin: 5px 0 0 0;
-	padding: 0;
-	list-style: none;
-	position: relative;} 
+  position: relative;
+  margin: 5px 0 0 0;
+  padding: 0;
+  list-style: none;
+}
 
 /* The line */
 .timeline:before {
-	content: ' ';	
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	width: 10px;
-	background: #E8512C;  
-	left: 12%;  
-	margin-left: -12px;}
+  content: ' ';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 10px;
+  left: 12%;
+  margin-left: -12px;
+  background: #E8512C;
+}
 
 .timeline > li {position: relative;}
 
 /* The date/time */
 .timeline > li .date {
-	display: block;
-	width: 9%; 
-	padding-right: 15px;
-	position: absolute;}
+  display: block;
+  position: absolute;
+  width: 9%;
+  padding-right: 15px;}
 
 .timeline > li .date span {
-	display: block;
-	text-align: right;}
+  display: block;
+  text-align: right;}
 
 .timeline > li .date span:first-child {
-	font-family: 'Open Sans';
-	font-size: .8em;
-	color: #F0A491;}
+  font-family: 'Open Sans';
+  font-size: .8em;
+  color: #F0A491;}
 
 .timeline > li .date span:last-child {
-	font-size: 1em;
-	color: #E8512C;}
-
-/*.timeline > li:nth-child(odd) .date span:last-child {
-	color: #6cbfee;} */
+  font-size: 1em;
+  color: #E8512C;}
 
 /* Right content */
 .timeline > li .nom {
-	font-family: 'Open Sans', serif;
-	margin: 0 0 15px 15%;	/*0 0 15px 25%*/
-	background: #E8512C;
-	color: #fff;
-	padding: .4em;
-	font-size: .9em;
-	font-weight: 300;
-	line-height: 1.4;
-	position: relative;
-	border-radius: 5px;}
+  font-family: 'Open Sans', serif;
+  margin: 0 0 15px 15%;
+  background: #E8512C;
+  color: #fff;
+  padding: .4em;
+  font-size: .9em;
+  font-weight: 300;
+  line-height: 1.4;
+  position: relative;
+  border-radius: 5px;}
 
-.nom > img {	
-	display: inline-block;	
-	margin: 5px;
-	height:250px; /*150px*/
-	width: 250px; /*150px*/ 	
-	border-radius: 5px ;}
+.nom > img {
+  display: inline-block;
+  margin: 5px;
+  height:250px;
+  width: 250px;
+  border-radius: 5px ;}
 
 /* The icons */
 .timeline > li .icone {
-	width: 35px;
-	height: 30px;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	font-size: 1.3em;
-	-webkit-font-smoothing: antialiased;
-	position: absolute;
-	color: #fff;
-	background: #E8512C;
-	border-radius: 50%;
-	/*box-shadow: 0 0 0 2px #F0A491;*/
-	text-align: center;
-	left: 12%;
-	top: 0;
-	margin-left: -25px;
-	padding-top: 5px;
-	}
+  width: 35px;
+  height: 30px;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  font-size: 1.3em;
+  -webkit-font-smoothing: antialiased;
+  position: absolute;
+  color: #fff;
+  background: #E8512C;
+  border-radius: 50%;
+  text-align: center;
+  left: 12%;
+  top: 0;
+  margin-left: -25px;
+  padding-top: 5px;
+}
 
-.evt::before{content: url('../icones/fleur.png');}	
-.work::before {content: url('../icones/cravate.png');/*content: '⚒';/*Linux*//*content: '☭';  /*Windows*/}
-.avion::before{content: '✈'; /* '☁'; */}
-.voyage::before{content: url('../icones/valise.png');}
-.matos::before{content: url('../icones/caddie.png');/*	content: 'Ġ' /* typo C39HrP36Tt : logo apple */}
-.love::before{content: '❤';}
-
-/* max-width: 47.2 */
 @media screen and (max-width: 58em) {
-	.timeline:before {display: none;}
+ 
+  .timeline:before {display: none;}
 
-	.timeline > li .date {
-		display: table;
-		width: 100%;
-		position: relative;
-		padding: 0 0 5px 0;}
+  .timeline > li .date {
+    display: table;
+    width: 100%;
+    position: relative;
+    padding: 0 0 5px 0;}
 
-	.timeline > li .date span {
-		display: inline-block;
-		text-align: left;
-		margin: 0 4px 0 0;}
+  .timeline > li .date span {
+    display: inline-block;
+    text-align: left;
+    margin: 0 4px 0 0;}
 
-	.timeline > li .nom {
-		margin: 0 0 20px 0;
-		padding: .4em;
-		font-weight: 300;
-		font-size: 95%;
-	}
+  .timeline > li .nom {
+    margin: 0 0 20px 0;
+    padding: .4em;
+    font-weight: 300;
+    font-size: 95%;}
 
-	.timeline > li .nom:after {
-		right: auto;
-		left: 20px;
-		border-right-color: transparent;
-		border-bottom-color: #3594cb;
-		top: -20px;
-	}
+  .timeline > li .nom:after {
+    right: auto;
+    left: 20px;
+    border-right-color: transparent;
+    border-bottom-color: #3594cb;
+    top: -20px;}
 
-	.timeline > li:nth-child(odd) .nom:after {
-		border-right-color: transparent;
-		border-bottom-color: #6cbfee;
-	}
+  .timeline > li:nth-child(odd) .nom:after {
+    border-right-color: transparent;
+    border-bottom-color: #6cbfee;}
 
-	.timeline > li .icone {
-    	width: 35px;
-	    height: 35px;
-		padding:10px 4px 0px 4px;
-		position: relative;
-		float: right;
-		left: auto;
-		font-size: 1.4em;
-		/* margin: -35px 5px 0 0px; */ /* icône au dessus */
-		margin: -22px 2px 0 0px;
-		z-index:1 ;
-		box-shadow: 2px 2px 1px #fff;
-	}	
+  .timeline > li .icone {
+    width: 35px;
+    height: 35px;
+    padding:10px 4px 0px 4px;
+    position: relative;
+    float: right;
+    left: auto;
+    font-size: 1.4em;
+    margin: -22px 2px 0 0px;
+    z-index:1 ;
+    box-shadow: 2px 2px 1px #fff;}
 }
 
