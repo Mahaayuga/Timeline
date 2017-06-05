@@ -52,7 +52,6 @@ class CSVReader
 
   def to_s
     "#{@jour} #{@annee} #{@nom}"
-
   end
 
 end
