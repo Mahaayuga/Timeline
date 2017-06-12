@@ -12,12 +12,17 @@ end
 
 get '/theme/:name' do
 # does not work, never...
-  if params['name'] == 'code'
-    slim :test,   locals: { life: mylife,
+  if params[:name] == 'code'
+    puts "On parle bien de #{params[:name]}"
+    slim :test, locals: { life: mylife,
                             symbole: 'fa fa-code' }
+  else
+    slim :public, locals: { life: mylife }
   end
-
 end
+
+
+
 
 get '/private' do
 #will show all events
